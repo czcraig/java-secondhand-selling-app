@@ -1,6 +1,6 @@
 package controllers;
 
-import models.Seeds;
+import db.Seeds;
 import spark.template.velocity.VelocityTemplateEngine;
 
 public class Controller {
