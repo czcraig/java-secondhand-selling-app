@@ -52,4 +52,24 @@ public class DBAdvert {
         return adverts;
     }
 
+    public static List<Advert> getLocationsAdverts(String location){
+        session = HibernateUtil.getSessionFactory().openSession();
+        List<Advert> adverts = null;
+
+        try {
+            Criteria cr = session.createCriteria(Advert.class);
+            cr.add(Restrictions.eq("location", location));
+            adverts = cr.list();
+        }
+        catch (HibernateException ex){
+            ex.printStackTrace();
+        }
+        finally {
+            session.close();
+        }
+
+        return adverts;
+    }
+
+
 }
