@@ -1,10 +1,16 @@
 package models;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "users")
 public class User {
 
     private int id;
     private String name;
     private String email;
+    private List<Advert> selling;
 
     public User() {
     }
@@ -14,6 +20,9 @@ public class User {
         this.email = email;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -22,6 +31,7 @@ public class User {
         this.id = id;
     }
 
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -30,11 +40,21 @@ public class User {
         this.name = name;
     }
 
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @OneToMany(mappedBy = "seller")
+    public List<Advert> getSelling() {
+        return selling;
+    }
+
+    public void setSelling(List<Advert> selling) {
+        this.selling = selling;
     }
 }
