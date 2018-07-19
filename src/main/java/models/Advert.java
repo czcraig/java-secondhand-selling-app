@@ -1,7 +1,13 @@
 package models;
 
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import javax.persistence.*;
+import java.sql.Date;
 import java.sql.Timestamp;
+
 @Entity
 @Table(name="adverts")
 public class Advert {
@@ -11,7 +17,10 @@ private String title;
 private String description;
 private CategoryType category;
 private double price;
-private Timestamp date;
+@Column(nullable = false)
+@Temporal(TemporalType.TIMESTAMP)
+@UpdateTimestamp
+private Date updatedAt;
 private String location;
 private User seller;
 private String image_url;
@@ -21,12 +30,11 @@ private String ad_status;
     public Advert() {
     }
 
-    public Advert(String title, String description, CategoryType category, double price, Timestamp date, String location, User seller, String image_url, String ad_status) {
+    public Advert(String title, String description, CategoryType category, double price, String location, User seller, String image_url, String ad_status) {
         this.title = title;
         this.description = description;
         this.category = category;
         this.price = price;
-        this.date = date;
         this.location = location;
         this.seller = seller;
         this.image_url = image_url;
@@ -80,13 +88,13 @@ private String ad_status;
         this.price = price;
     }
 
-    @Column(name = "date")
-    public Timestamp getDate() {
-        return date;
+
+    public Date getDate() {
+        return updatedAt;
     }
 
-    public void setDate(Timestamp date) {
-        this.date = date;
+    public void setDate(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Column(name = "location")
