@@ -1,5 +1,6 @@
 package models;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -7,6 +8,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Entity
 @Table(name="adverts")
@@ -19,7 +21,7 @@ private CategoryType category;
 private double price;
 @Column(nullable = false)
 @Temporal(TemporalType.TIMESTAMP)
-@UpdateTimestamp
+@CreationTimestamp
 private Date updatedAt;
 private String location;
 private User seller;
@@ -39,6 +41,7 @@ private String ad_status;
         this.seller = seller;
         this.image_url = image_url;
         this.ad_status = ad_status;
+        this.updatedAt = new Date(System.currentTimeMillis());
     }
 
     @Id
