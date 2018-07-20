@@ -57,7 +57,7 @@ public class AdvertsController {
 
             String title = req.queryParams("title");
             String description = req.queryParams("description");
-            CategoryType category = CategoryType.valueOf(Advert <CategoryType> category, (req.queryParams("category")));
+            CategoryType category = CategoryType.valueOf((req.queryParams("category")));
             double price = Double.parseDouble(req.queryParams("price"));
             String location =  req.queryParams("location");
             User seller =  req.queryParams("seller");
