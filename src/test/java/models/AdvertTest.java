@@ -77,4 +77,10 @@ public class AdvertTest {
         assertEquals("On hold", advert.getAd_status());
 
     }
+
+    @Test
+    public void canGetCategoryValue(){
+        assertEquals("Bicyles", advert.getCategoryValue());
+    }
+
 }

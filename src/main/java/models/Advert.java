@@ -78,6 +78,10 @@ private String ad_status;
         return category;
     }
 
+    public String getCategoryValue(){
+        return getCategory().getValue();
+    }
+
     public void setCategory(CategoryType category) {
         this.category = category;
     }
