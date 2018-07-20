@@ -26,13 +26,13 @@ private Date updatedAt;
 private String location;
 private User seller;
 private String imageUrl;
-private String ad_status;
+private String adStatus;
 
 
     public Advert() {
     }
 
-    public Advert(String title, String description, CategoryType category, double price, String location, User seller, String imageUrl, String ad_status) {
+    public Advert(String title, String description, CategoryType category, double price, String location, User seller, String imageUrl, String adStatus) {
         this.title = title;
         this.description = description;
         this.category = category;
@@ -40,7 +40,7 @@ private String ad_status;
         this.location = location;
         this.seller = seller;
         this.imageUrl = imageUrl;
-        this.ad_status = ad_status;
+        this.adStatus = adStatus;
         this.updatedAt = new Date(System.currentTimeMillis());
     }
 
@@ -131,11 +131,11 @@ private String ad_status;
     }
 
     @Column(name = "ad_status")
-    public String getAd_status() {
-        return ad_status;
+    public String getAdStatus() {
+        return adStatus;
     }
 
-    public void setAd_status(String ad_status) {
-        this.ad_status = ad_status;
+    public void setAdStatus(String ad_status) {
+        this.adStatus = ad_status;
     }
 }
