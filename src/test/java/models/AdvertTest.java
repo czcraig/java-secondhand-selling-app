@@ -56,14 +56,14 @@ public class AdvertTest {
 
 
     @Test
-    public void getImage_url() {
-        assertEquals("public/images/bike.jpg", advert.getImage_url());
+    public void getImageUrl() {
+        assertEquals("public/images/bike.jpg", advert.getImageUrl());
     }
 
     @Test
-    public void setImage_url() {
-        advert.setImage_url("public/images/bike2.jpg");
-        assertEquals("public/images/bike2.jpg", advert.getImage_url());
+    public void setImageUrl() {
+        advert.setImageUrl("public/images/bike2.jpg");
+        assertEquals("public/images/bike2.jpg", advert.getImageUrl());
     }
 
     @Test

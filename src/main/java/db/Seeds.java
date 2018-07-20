@@ -4,11 +4,16 @@ import models.Advert;
 import models.CategoryType;
 import models.User;
 
+import java.util.List;
+
 public class Seeds {
 
     public static void seedData(){
         DBHelper.deleteAll(Advert.class);
         DBHelper.deleteAll(User.class);
+
+        List<CategoryType> categories = DBHelper.getAll(Enum.class) ;
+        DBHelper.save(categories);
 
         User user1 = new User("Bill", "bill@hotmail.com");
         DBHelper.save(user1);
