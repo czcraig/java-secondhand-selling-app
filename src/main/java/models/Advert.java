@@ -109,7 +109,7 @@ private String adStatus;
         this.location = location;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     public User getSeller() {
         return seller;
