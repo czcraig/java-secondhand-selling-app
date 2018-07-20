@@ -3,7 +3,7 @@
 <div class="container">
     <table>
         <td>
-#foreach($category in $categories) <a href="/adverts/$category.getValue()">$category.getValue()</a>
+#foreach($category in $categories) <a href="/adverts/$category.getValue().toLowerCase()">$category.getValue()</a>
 #end
         </td>
     </table>

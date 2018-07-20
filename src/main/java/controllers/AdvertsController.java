@@ -37,35 +37,24 @@ public class AdvertsController {
             return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
+//        CARS
         get("/adverts/cars", (request, response) -> {
             Map<String, Object> model = new HashMap();
-            model.put("template", "templates/adverts/index.vtl");
-
-
-            List<Advert> adverts = DBAdvert.getCategorysAdverts(CategoryType.CARS);
+            model.put("template", "templates/adverts/cars.vtl");
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.CARS);
             model.put("adverts", adverts);
             return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
-        get("/adverts/furniture", (request, response) -> {
-            Map<String, Object> model = new HashMap();
-            model.put("template", "templates/adverts/index.vtl");
+//        get("/adverts/furniture", (request, response) -> {
+//            Map<String, Object> model = new HashMap();
+//            model.put("template", "templates/adverts/furniture.vtl");
+//
+//            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.FURNITURE);
+//            model.put("adverts", adverts);
+//            return new ModelAndView(model, "templates/layout.vtl");
+//        }, new VelocityTemplateEngine());
 
-            List<Advert> adverts = DBAdvert.getCategorysAdverts(CategoryType.FURNITURE);
-            model.put("adverts", adverts);
-            return new ModelAndView(model, "templates/layout.vtl");
-        }, new VelocityTemplateEngine());
-
-
-        get("/adverts/cars", (request, response) -> {
-            Map<String, Object> model = new HashMap();
-            model.put("template", "templates/adverts/index.vtl");
-
-
-            List<Advert> adverts = DBAdvert.getCategorysAdverts(CategoryType.CARS);
-            model.put("adverts", adverts);
-            return new ModelAndView(model, "templates/layout.vtl");
-        }, new VelocityTemplateEngine());
 
 
 //        NEW

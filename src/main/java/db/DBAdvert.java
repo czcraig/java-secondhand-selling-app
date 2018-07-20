@@ -33,7 +33,7 @@ public class DBAdvert {
         return adverts;
     }
 
-    public static List<Advert> getCategorysAdverts(CategoryType category){
+    public static List<Advert> getAllAdvertsForCategory(CategoryType category){
         session = HibernateUtil.getSessionFactory().openSession();
         List<Advert> adverts = null;
 
