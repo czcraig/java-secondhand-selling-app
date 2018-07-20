@@ -7,6 +7,7 @@ import models.User;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,26 +41,27 @@ public class AdvertsController {
         get("/adverts/new", (request, response) -> {
 //
             Map<String, Object> model = new HashMap();
-            List<CategoryType> categories = DBHelper.getAll(Enum.class) ;
+            List<CategoryType> categories = Arrays.asList(CategoryType.values());
             model.put("categories", categories);
             model.put("template", "templates/adverts/create.vtl");
 
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());
-//            return "hello world!";});
 
 //      CREATE
         post("/adverts", (req, res) -> {
 
             String title = req.queryParams("title");
             String description = req.queryParams("description");
-            CategoryType category = CategoryType.valueOf((req.queryParams("category")));
+            String categoryValue = req.queryParams("category");
+            CategoryType category = CategoryType.valueOf(categoryValue.toUpperCase());
             double price = Double.parseDouble(req.queryParams("price"));
             String location =  req.queryParams("location");
             String sellerName =  req.queryParams("seller_name");
             String newEmail = req.queryParams("email");
             User newUser = new User( sellerName, newEmail);
+            DBHelper.save(newUser);
             String imageUrl =  req.queryParams("image_url");
             String adStatus =  req.queryParams("ad_status");
 
@@ -94,8 +96,8 @@ public class AdvertsController {
             int advertId = Integer.parseInt(request.params(":id"));
             Advert advert = DBHelper.find(Advert.class, advertId);
             model.put("advert", advert);
-            List<Advert> departments = DBHelper.getAll(Advert.class);
-            model.put("departments", departments);
+            List<CategoryType> categories = Arrays.asList(CategoryType.values());
+            model.put("categories", categories);
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());
