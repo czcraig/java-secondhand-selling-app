@@ -11,7 +11,7 @@
 <label for="category">Category</label>
 <select id="category" name="category">
     #foreach ($category in #categories)
-    <option value="$category.getId()"> $category.getCategory()</option>
+    <option value="$category.getId()"> $category.getValue()</option>
     #end
 </select>
 
