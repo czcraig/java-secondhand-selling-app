@@ -52,19 +52,18 @@ public class AdvertsController {
 //      CREATE
         post("/adverts", (req, res) -> {
 
-            int advertId = Integer.parseInt(req.queryParams("department"));
-            Advert advert = DBHelper.find(Advert.class, advertId);
-
             String title = req.queryParams("title");
             String description = req.queryParams("description");
             CategoryType category = CategoryType.valueOf((req.queryParams("category")));
             double price = Double.parseDouble(req.queryParams("price"));
             String location =  req.queryParams("location");
-            User seller =  req.queryParams("seller");
+            String sellerName =  req.queryParams("seller_name");
+            String newEmail = req.queryParams("email");
+            User newUser = new User( sellerName, newEmail);
             String imageUrl =  req.queryParams("image_url");
             String adStatus =  req.queryParams("ad_status");
 
-            Advert newAdvert = new Advert(title, description, category, price, location, seller, imageUrl, adStatus);
+            Advert newAdvert = new Advert(title, description, category, price, location, newUser, imageUrl, adStatus);
             DBHelper.save(newAdvert);
 
             res.redirect("/adverts");
