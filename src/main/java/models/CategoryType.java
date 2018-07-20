@@ -3,12 +3,12 @@ package models;
 public enum CategoryType {
 
 
-    CAR("Cars"),
-    BICYLE("Bicyles"),
+    CARS("Cars"),
+    BICYLES("Bicyles"),
     FURNITURE("Furniture"),
     TECHNOLOGY("Technology"),
-    SPORTS("Sports Equipment"),
-    INSTRUMENT("Instruments"),
+    SPORTS("Sports"),
+    INSTRUMENTS("Instruments"),
     CLOTHES("Clothes"),
     APPLIANCES("Appliances"),
     TOYS("Toys"),

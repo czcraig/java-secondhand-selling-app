@@ -78,13 +78,11 @@ private String ad_status;
         return category;
     }
 
-    public String getCategoryValue(){
-        return getCategory().getValue();
-    }
-
     public void setCategory(CategoryType category) {
         this.category = category;
     }
+
+
 
     @Column(name = "price")
     public double getPrice() {
@@ -96,14 +94,14 @@ private String ad_status;
     }
 
 
-    public Date getDate() {
+
+    public Date getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setDate(Date updatedAt) {
+    public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-
     @Column(name = "location")
     public String getLocation() {
         return location;

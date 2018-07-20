@@ -4,6 +4,7 @@
 
     <table>
         <tr>
+            <th>Ad Ref.</th>
             <th>Title</th>
             <th>Image</th>
             <th>Category</th>
@@ -14,6 +15,7 @@
 
         #foreach($advert in $adverts)
         <tr>
+            <td>$advert.getId()</td>
             <td>$advert.getTitle()</td>
             <td><img src="$advert.getImageUrl()"></td>
             <td>$advert.getCategory().getValue()</td>

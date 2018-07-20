@@ -1,6 +1,6 @@
 <h1>New Advert</h1>
 
-<form action="/adverts" method="post"></form>
+<form action="/adverts" method="post">
 
 <label for="title">Title</label>
 <input type="text" id="title" name="title" required="true">
@@ -11,12 +11,12 @@
 <label for="category">Category</label>
 <select id="category" name="category">
     #foreach ($category in $categories)
-    <option value="$category.getId()"> $category.getValue()</option>
+    <option value="$category.getValue()"> $category.getValue()</option>
     #end
 </select>
 
 <label for="price">Price</label>
-<input type="number" id="price" name="salary" required="true">
+<input type="number" id="price" name="price" required="true">
 
 <label for="location">Location</label>
 <input type="text" id="location" name="location" required="true">
@@ -32,3 +32,4 @@
 </select>
 
 <input type="Submit" value="Create Advert">
+</form>
