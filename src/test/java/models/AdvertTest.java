@@ -67,14 +67,14 @@ public class AdvertTest {
     }
 
     @Test
-    public void getAd_status() {
-        assertEquals("For Sale", advert.getAd_status());
+    public void getAdStatus() {
+        assertEquals("For Sale", advert.getAdStatus());
     }
 
     @Test
-    public void setAd_status() {
-        advert.setAd_status("On hold");
-        assertEquals("On hold", advert.getAd_status());
+    public void setAdStatus() {
+        advert.setAdStatus("On hold");
+        assertEquals("On hold", advert.getAdStatus());
 
     }
 
