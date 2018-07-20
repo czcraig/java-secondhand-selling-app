@@ -1,0 +1,37 @@
+<h1>Update Advert</h1>
+
+<form action="/adverts" method="post">
+
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" required="true" value="$user.getTitle()">
+
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" required="true" value="$user.getDescription()">
+
+    <label for="category">Category</label>
+    <select id="category" name="category" value="$category.getValue()">
+        #foreach ($category in $categories)
+        <option value="$category.getId()"> $category.getValue()</option>
+        #end
+    </select>
+
+    <label for="price">Price</label>
+    <input type="number" id="price" name="price" required="true" value="user.getPrice()">
+
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" required="true" value="$user.getLocation()">
+
+    <label for="image-url">Image Url</label>
+    <input type="image-url" id="image-url" name="image-url" required="true" value="$user.getImageUrl()">
+
+    <label for="advert-status">Advert Status</label>
+    <select name="advert-status" id="advert-status">
+        <option value="for-sale"> For Sale </option>
+        <option value="under-offer"> Under Offer </option>
+        <option value="sold"> Sold </option>
+    </select>
+
+    <input type="Submit" value="Save Advert">
+
+
+</form>

@@ -131,10 +131,10 @@ private String adStatus;
 
     @Column(name = "ad_status")
     public String getAdStatus() {
-        return ad_status;
+        return adStatus;
     }
 
     public void setAdStatus(String ad_status) {
-        this.ad_status = ad_status;
+        this.adStatus = ad_status;
     }
 }
