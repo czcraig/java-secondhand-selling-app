@@ -83,7 +83,6 @@ private String adStatus;
     }
 
 
-
     @Column(name = "price")
     public double getPrice() {
         return price;
@@ -93,8 +92,7 @@ private String adStatus;
         this.price = price;
     }
 
-
-
+    @Column(name = "updated_at")
     public Date getUpdatedAt() {
         return updatedAt;
     }
