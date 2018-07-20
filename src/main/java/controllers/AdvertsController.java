@@ -114,6 +114,9 @@ public class AdvertsController {
             int advertId = Integer.parseInt(request.params(":id"));
             Advert advert = DBHelper.find(Advert.class, advertId);
             model.put("advert", advert);
+//            int userId = Integer.parseInt(request.params(":id"));
+//            User user = DBHelper.find(User.class, userId);
+//            model.put("user", user);
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());

@@ -13,6 +13,8 @@
         <th>Location</th>
         <th>Updated On</th>
         <th>Advert Status</th>
+        <th>Seller's Name</th>
+        <th>Seller's Email Address</th>
 
     </tr>
 
@@ -23,9 +25,10 @@
         <td>$advert.getCategory().getValue()</td>
         <td>$advert.getPrice()</td>
         <td>$advert.getLocation()</td>
-
         <td>$advert.getUpdatedAt()</td>
         <td>$advert.getAdStatus()</td>
+        <td>$advert.getSeller().getName()</td>
+        <td>$advert.getSeller().getEmail()</td>
 
 
         <td><a href="/adverts/$advert.getId()/edit">Edit</a></td>
