@@ -46,14 +46,109 @@ public class AdvertsController {
             return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
-//        get("/adverts/furniture", (request, response) -> {
-//            Map<String, Object> model = new HashMap();
-//            model.put("template", "templates/adverts/furniture.vtl");
-//
-//            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.FURNITURE);
-//            model.put("adverts", adverts);
-//            return new ModelAndView(model, "templates/layout.vtl");
-//        }, new VelocityTemplateEngine());
+        // Furniture
+        get("/adverts/furniture", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/furniture.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.FURNITURE);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        // Bicycles
+        get("/adverts/bicycles", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/bicycles.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.BICYCLES);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        // Technology
+        get("/adverts/technology", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/technology.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.TECHNOLOGY);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+
+        // Sports
+        get("/adverts/sports", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/sports.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.SPORTS);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        // Instruments
+        get("/adverts/instruments", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/instruments.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.INSTRUMENTS);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        // Clothes
+        get("/adverts/clothes", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/clothes.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.CLOTHES);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        // Appliances
+        get("/adverts/appliances", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/appliances.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.APPLIANCES);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        // Toys
+        get("/adverts/toys", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/toys.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.TOYS);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        //Free
+        get("/adverts/free", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/free.vtl");
+
+            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.FREE);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

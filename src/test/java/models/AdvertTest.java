@@ -14,12 +14,12 @@ public class AdvertTest {
     @Before
     public void setUp()  {
         user1 = new User("Iona", "iona@gmail.com");
-        advert = new Advert("Bike for sale", "Hardly used", CategoryType.BICYLES, 35.00, "Edinburgh", user1, "public/images/bike.jpg", "For Sale");
+        advert = new Advert("Bike for sale", "Hardly used", CategoryType.BICYCLES, 35.00, "Edinburgh", user1, "public/images/bike.jpg", "For Sale");
     }
 
     @Test
     public void getCategory() {
-        assertEquals(CategoryType.BICYLES, advert.getCategory());
+        assertEquals(CategoryType.BICYCLES, advert.getCategory());
     }
 
     @Test
