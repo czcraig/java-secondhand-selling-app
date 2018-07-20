@@ -1,6 +1,5 @@
 package controllers;
 
-import com.sun.org.apache.xerces.internal.impl.dv.xs.AnySimpleDV;
 import db.DBHelper;
 import models.Advert;
 import models.CategoryType;
@@ -23,7 +22,7 @@ public class AdvertsController {
     }
 
     public void setupEndPoints() {
-        VelocityTemplateEngine velocityTemplateEngine = new VelocityTemplateEngine();
+
 
 //        INDEX
         get("/adverts", (request, response) -> {
@@ -34,20 +33,21 @@ public class AdvertsController {
             List<Advert> adverts = DBHelper.getAll(Advert.class);
             model.put("adverts", adverts);
             return new ModelAndView(model, "templates/layout.vtl");
-        }, velocityTemplateEngine);
+        }, new VelocityTemplateEngine());
 
 
 //        NEW
         get("/adverts/new", (request, response) -> {
-
+//
             Map<String, Object> model = new HashMap();
-            List<CategoryType> categories = DBHelper.getAll(CategoryType.class);
+            List<CategoryType> categories = DBHelper.getAll(Enum.class) ;
             model.put("categories", categories);
             model.put("template", "templates/adverts/create.vtl");
 
             return new ModelAndView(model, "templates/layout.vtl");
 
-        }, velocityTemplateEngine);
+        }, new VelocityTemplateEngine());
+//            return "hello world!";});
 
 //      CREATE
         post("/adverts", (req, res) -> {
@@ -69,7 +69,7 @@ public class AdvertsController {
             res.redirect("/adverts");
 
             return null;
-        }, velocityTemplateEngine);
+        }, new VelocityTemplateEngine());
 
 
 //        SHOW
@@ -83,7 +83,7 @@ public class AdvertsController {
             model.put("advert", advert);
             return new ModelAndView(model, "templates/layout.vtl");
 
-        }, velocityTemplateEngine);
+        }, new VelocityTemplateEngine());
 
 
 //        EDIT
