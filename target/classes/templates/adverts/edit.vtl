@@ -3,10 +3,10 @@
 <form action="/adverts" method="post">
 
     <label for="title">Title</label>
-    <input type="text" id="title" name="title" required="true" value="$user.getTitle()">
+    <input type="text" id="title" name="title" required="true" value="$advert.getTitle()">
 
     <label for="description">Description</label>
-    <input type="text" id="description" name="description" required="true" value="$user.getDescription()">
+    <input type="text" id="description" name="description" required="true" value="$advert.getDescription()">
 
     <label for="category">Category</label>
     <select id="category" name="category" value="$category.getValue()">
@@ -16,16 +16,16 @@
     </select>
 
     <label for="price">Price</label>
-    <input type="number" id="price" name="price" required="true" value="user.getPrice()">
+    <input type="number" id="price" name="price" required="true" value="advert.getPrice()">
 
     <label for="location">Location</label>
-    <input type="text" id="location" name="location" required="true" value="$user.getLocation()">
+    <input type="text" id="location" name="location" required="true" value="$advert.getLocation()">
 
     <label for="image-url">Image Url</label>
-    <input type="image-url" id="image-url" name="image-url" required="true" value="$user.getImageUrl()">
+    <input type="image-url" id="image-url" name="image-url" required="true" value="$advert.getImageUrl()">
 
-    <label for="advert-status">Advert Status</label>
-    <select name="advert-status" id="advert-status">
+    <label for="ad_status">Advert Status</label>
+    <select name="ad_status" id="ad_status">
         <option value="for-sale"> For Sale </option>
         <option value="under-offer"> Under Offer </option>
         <option value="sold"> Sold </option>

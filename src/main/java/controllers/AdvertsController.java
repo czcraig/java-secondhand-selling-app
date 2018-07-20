@@ -1,5 +1,6 @@
 package controllers;
 
+import db.DBAdvert;
 import db.DBHelper;
 import models.Advert;
 import models.CategoryType;
@@ -32,6 +33,36 @@ public class AdvertsController {
 
 
             List<Advert> adverts = DBHelper.getAll(Advert.class);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        get("/adverts/cars", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/index.vtl");
+
+
+            List<Advert> adverts = DBAdvert.getCategorysAdverts(CategoryType.CARS);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+        get("/adverts/furniture", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/index.vtl");
+
+            List<Advert> adverts = DBAdvert.getCategorysAdverts(CategoryType.FURNITURE);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+
+        get("/adverts/cars", (request, response) -> {
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/adverts/index.vtl");
+
+
+            List<Advert> adverts = DBAdvert.getCategorysAdverts(CategoryType.CARS);
             model.put("adverts", adverts);
             return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());

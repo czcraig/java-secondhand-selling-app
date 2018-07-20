@@ -1,0 +1,32 @@
+<h1>All Cars for sale</h1>
+<div class="container">
+
+    <table>
+        <tr>
+            <th>Ad Ref.</th>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Location</th>
+
+        </tr>
+
+        <tr>
+
+            #foreach($advert in $adverts)
+        <tr>
+            <td>$advert.getId()</td>
+            <td>$advert.getTitle()</td>
+            <td><img src="$advert.getImageUrl()"></td>
+            <td>$advert.getCategory().getValue()</td>
+            <td>$advert.getPrice()</td>
+            <td>$advert.getLocation()</td>
+
+            <td><a href="/adverts/$advert.getId()">SHOW</a></td>
+        </tr>
+        #end
+        </tr>
+</table>
+
+</div>
