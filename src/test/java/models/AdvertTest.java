@@ -1,5 +1,6 @@
 package models;
 
+import db.DBAdvert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -77,6 +78,7 @@ public class AdvertTest {
         assertEquals("On hold", advert.getAdStatus());
 
     }
+
 
 
 }

@@ -13,10 +13,12 @@ import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.get;
+import static spark.Spark.staticFileLocation;
 
 public class Controller {
     public static void main(String[] args) {
 
+        staticFileLocation("/public");
         Seeds.seedData();
 
 
@@ -46,6 +48,8 @@ public class Controller {
             model.put("template", "templates/sell.vtl");
             return new ModelAndView(model, "templates/layout.vtl");
         }, new VelocityTemplateEngine());
+
+
 
     }
 }

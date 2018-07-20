@@ -12,7 +12,7 @@ public enum CategoryType {
     CLOTHES("Clothes"),
     APPLIANCES("Appliances"),
     TOYS("Toys"),
-    FREE("Free Stuff");
+    FREE("Free");
 
 
    private final String value;
