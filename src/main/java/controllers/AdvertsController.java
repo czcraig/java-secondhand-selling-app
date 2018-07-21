@@ -139,19 +139,6 @@ public class AdvertsController {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //        NEW
         get("/adverts/new", (request, response) -> {
 //
@@ -218,6 +205,40 @@ public class AdvertsController {
             model.put("categories", categories);
             return new ModelAndView(model, "templates/layout.vtl");
 
+        }, new VelocityTemplateEngine());
+
+
+
+        // UPDATE
+        post("adverts/:id", (request, response) -> {
+            int advertId = Integer.parseInt(request.params(":id"));
+            String title = request.queryParams("title");
+            String description = request.queryParams("description");
+            String categoryValue = request.queryParams("category");
+            CategoryType category = CategoryType.valueOf(categoryValue.toUpperCase());
+            double price = Double.parseDouble(request.queryParams("price"));
+            String location =  request.queryParams("location");
+            String sellerName =  request.queryParams("seller_name");
+            String newEmail = request.queryParams("email");
+            User newUser = new User( sellerName, newEmail);
+            DBHelper.save(newUser);
+            String imageUrl =  request.queryParams("image_url");
+            String adStatus =  request.queryParams("ad_status");
+
+            Advert advert = DBHelper.find(Advert.class, advertId);
+
+            advert.setTitle(title);
+            advert.setDescription(description);
+            advert.setCategory(category);
+            advert.setPrice(price);
+            advert.setLocation(location);
+            advert.setImageUrl(imageUrl);
+            advert.setAdStatus(adStatus);
+            DBHelper.save(advert);
+
+            response.redirect("/adverts");
+
+            return null;
         }, new VelocityTemplateEngine());
 
     }
