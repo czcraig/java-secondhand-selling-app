@@ -7,8 +7,6 @@
             <th>Name</th>
             <th>Email</th>
 
-
-
         </tr>
 
         #foreach($user in $users)
@@ -17,7 +15,7 @@
             <td>$user.getEmail()</td>
 
 
-            <td><a href="/users/$users.getId()">SHOW</a></td>
+            <td><a href="/users/$user.getId()">SHOW</a></td>
         </tr>
         #end
 

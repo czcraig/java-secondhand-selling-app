@@ -1,0 +1,26 @@
+<h1>All Users</h1>
+
+<div class="container">
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+
+        </tr>
+
+        #foreach($user in $users)
+        <tr>
+            <td>$user.getName()</td>
+            <td>$user.getEmail()</td>
+
+
+            <td><a href="/users/$user.getId()">SHOW</a></td>
+        </tr>
+        #end
+
+
+
+    </table>
+
+</div>

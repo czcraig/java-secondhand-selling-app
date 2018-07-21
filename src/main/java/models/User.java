@@ -57,4 +57,10 @@ public class User {
     public void setSelling(List<Advert> selling) {
         this.selling = selling;
     }
+
+    public void addAdvertToSelling(Advert advert) {
+        selling.add(advert);
+    }
+
+
 }
