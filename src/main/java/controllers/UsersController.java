@@ -98,5 +98,40 @@ public class UsersController {
         }, new VelocityTemplateEngine());
 
 
+//        EDIT
+        get("/users/:id/edit", (request, response) -> {
+
+            Map<String, Object> model = new HashMap<>();
+            model.put("template", "templates/users/edit.vtl");
+            int userId = Integer.parseInt(request.params(":id"));
+            User user = DBHelper.find(User.class, userId);
+            model.put("user", user);
+            return new ModelAndView(model, "templates/layout.vtl");
+
+        }, new VelocityTemplateEngine());
+
+
+
+        // UPDATE
+        post("users/:id", (request, response) -> {
+            int userId = Integer.parseInt(request.params(":id"));
+
+            String name = request.queryParams("name");
+            String email = request.queryParams("email");
+            int rating = Integer.parseInt(request.queryParams("rating"));
+            User user = DBHelper.find(User.class, userId);
+
+            user.setName(name);
+            user.setEmail(email);
+            user.setRating(rating);
+            DBHelper.update(user);
+
+            response.redirect("/users");
+
+            return null;
+        }, new VelocityTemplateEngine());
+
     }
+
 }
+
