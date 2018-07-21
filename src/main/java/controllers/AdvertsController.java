@@ -234,7 +234,7 @@ public class AdvertsController {
             advert.setLocation(location);
             advert.setImageUrl(imageUrl);
             advert.setAdStatus(adStatus);
-            DBHelper.save(advert);
+            DBHelper.update(advert);
 
             response.redirect("/adverts");
 
