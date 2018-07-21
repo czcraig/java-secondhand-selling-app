@@ -32,18 +32,28 @@ public class UsersController {
         }, new VelocityTemplateEngine());
 
 
-
         get("/users/:id", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
 
-        model.put("template", "templates/users/show.vtl");
-        int userId = Integer.parseInt(request.params(":id"));
-        User user = DBHelper.find(User.class, userId);
-        model.put("user", user);
-         List<Advert> adverts = DBAdvert.getUsersAdverts(user);
-         model.put("adverts", adverts);
-        return new ModelAndView(model, "templates/layout.vtl");
+            model.put("template", "templates/users/show.vtl");
+            int userId = Integer.parseInt(request.params(":id"));
+            User user = DBHelper.find(User.class, userId);
+            model.put("user", user);
+            return new ModelAndView(model, "templates/layout.vtl");
 
-    }, new VelocityTemplateEngine());
+        }, new VelocityTemplateEngine());
+
+        get("/users/:id/selling", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+
+            model.put("template", "templates/users/selling.vtl");
+            int userId = Integer.parseInt(request.params(":id"));
+            User user = DBHelper.find(User.class, userId);
+            model.put("user", user);
+            List<Advert> adverts = DBAdvert.getUsersAdverts(user);
+            model.put("adverts", adverts);
+            return new ModelAndView(model, "templates/layout.vtl");
+
+        }, new VelocityTemplateEngine());
     }
 }

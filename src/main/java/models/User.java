@@ -11,6 +11,7 @@ public class User {
     private String name;
     private String email;
     private List<Advert> selling;
+    private List<Advert> favourites;
 
     public User() {
     }
@@ -62,5 +63,15 @@ public class User {
         selling.add(advert);
     }
 
+    public List<Advert> getFavourites() {
+        return favourites;
+    }
 
+    public void setFavourites(List<Advert> favourites) {
+        this.favourites = favourites;
+    }
+
+    public void addAdvertToFavourites(Advert advert) {
+        favourites.add(advert);
+    }
 }
