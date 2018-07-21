@@ -20,7 +20,7 @@ public class Seeds {
         User user3 = new User("Chris", "chris@gmail.com");
         DBHelper.save(user3);
 
-        Advert advert1 = new Advert("Bike for sale", "Hardly used", CategoryType.BICYLES, 35.00, "Edinburgh", user1, "public/images/bike.jpg", "For Sale");
+        Advert advert1 = new Advert("Bike for sale", "Hardly used", CategoryType.BICYCLES, 35.00, "Edinburgh", user1, "public/images/bike.jpg", "For Sale");
         DBHelper.save(advert1);
 
         Advert advert2 = new Advert("Guitar for Sale", "Hardly used", CategoryType.INSTRUMENTS, 85.00, "Edinburgh", user1, "public/images/guitar.jpg", "For Sale");
@@ -47,6 +47,9 @@ public class Seeds {
 
         Advert advert9 = new Advert("Dress", "Fantastic condition, only wore once", CategoryType.CLOTHES, 20.00, "Aberdeen", user3, "public/images/dress.jpg", "For Sale");
         DBHelper.save(advert9);
+
+        Advert advert10 = new Advert("Ninja Turtle figure", "its a toy", CategoryType.TOYS, 5.00, "Fife", user3, "public/images/ninja_turtle.jpg", "For Sale");
+        DBHelper.save(advert10);
 
 
     }

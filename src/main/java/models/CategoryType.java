@@ -4,7 +4,7 @@ public enum CategoryType {
 
 
     CARS("Cars"),
-    BICYLES("Bicyles"),
+    BICYCLES("Bicycles"),
     FURNITURE("Furniture"),
     TECHNOLOGY("Technology"),
     SPORTS("Sports"),
