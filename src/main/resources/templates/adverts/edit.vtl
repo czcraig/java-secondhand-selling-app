@@ -11,12 +11,12 @@
     <label for="category">Category</label>
     <select id="category" name="category" value="$category.getValue()">
         #foreach ($category in $categories)
-        <option value="$category.getValue()"> $category.getValue()</option>
+        <option value="$category.getValue() selected if $advert.getCategory.getValue()" > $category.getValue()</option>
         #end
     </select>
 
     <label for="price">Price</label>
-    <input type="number" id="price" name="price" required="true" value="advert.getPrice()">
+    <input type="number" id="price" name="price" required="true" value="$advert.getPrice()">
 
     <label for="location">Location</label>
     <input type="text" id="location" name="location" required="true" value="$advert.getLocation()">
