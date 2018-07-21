@@ -51,6 +51,8 @@ public class Seeds {
         Advert advert10 = new Advert("Ninja Turtle figure", "its a toy", CategoryType.TOYS, 5.00, "Fife", user3, "public/images/ninja_turtle.jpg", "For Sale");
         DBHelper.save(advert10);
 
+        DBUser.addFavouriteAdToUser(user1, advert10);
+        DBUser.addFavouriteAdToUser(user1, advert9);
 
     }
 }

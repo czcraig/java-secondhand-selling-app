@@ -7,12 +7,14 @@
             <th>Name</th>
             <th>Email</th>
             <th>Selling</th>
+            <th>Favorites</th>
     </tr>
 
         <tr>
             <td>$user.getName()</td>
             <td>$user.getEmail()</td>
             <td><a href="/users/$user.getId()/selling">Items for sale</a></td>
+            <td><a href="/users/$user.getId()/favourites">Favourited Items</a></td>
         </tr>
     </table>
 

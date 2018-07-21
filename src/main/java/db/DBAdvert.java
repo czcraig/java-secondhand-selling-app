@@ -14,7 +14,7 @@ public class DBAdvert {
 
     private static Session session;
 
-    public static List<Advert> getUsersAdverts(User seller){
+    public static List<Advert> getUsersSellingAdverts(User seller){
         session = HibernateUtil.getSessionFactory().openSession();
         List<Advert> adverts = null;
 

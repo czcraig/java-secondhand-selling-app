@@ -1,14 +1,15 @@
 package models;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenerationTime;
-import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="adverts")
@@ -27,6 +28,7 @@ private String location;
 private User seller;
 private String imageUrl;
 private String adStatus;
+private List<User> favouritedBy;
 
 
     public Advert() {
@@ -42,6 +44,7 @@ private String adStatus;
         this.imageUrl = imageUrl;
         this.adStatus = adStatus;
         this.updatedAt = new Date(System.currentTimeMillis());
+        this.favouritedBy = new ArrayList<User>();
     }
 
     @Id
@@ -135,5 +138,22 @@ private String adStatus;
 
     public void setAdStatus(String ad_status) {
         this.adStatus = ad_status;
+    }
+
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @ManyToMany
+    @JoinTable(name = "adverts_users",
+            joinColumns = {@JoinColumn(name = "advert_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "user_id", nullable = false, updatable = false)})
+    public List<User> getFavouritedBy() {
+        return favouritedBy;
+    }
+
+    public void setFavouritedBy(List<User> favouritedBy) {
+        this.favouritedBy = favouritedBy;
+    }
+
+    public void addUserToFavouritedBy(User user){
+        favouritedBy.add(user);
     }
 }

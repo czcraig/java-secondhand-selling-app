@@ -1,0 +1,16 @@
+<h1>Your Banana Tree Branch</h1>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Favourites</th>
+        </tr>
+        #foreach ($advert in $adverts)
+        <tr>
+            <td><a href="/adverts/$advert.getId()">$advert.getTitle()</a></td>
+
+        </tr>
+        #end
+
+    </table>
+</div>

@@ -1,6 +1,9 @@
 package models;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -19,6 +22,7 @@ public class User {
     public User(String name, String email) {
         this.name = name;
         this.email = email;
+        this.favourites = new ArrayList<Advert>();
     }
 
     @Id
@@ -63,9 +67,15 @@ public class User {
         selling.add(advert);
     }
 
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @ManyToMany
+    @JoinTable(name = "adverts_users",
+            joinColumns = {@JoinColumn(name = "user_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "advert_id", nullable = false, updatable = false)})
     public List<Advert> getFavourites() {
         return favourites;
     }
+
 
     public void setFavourites(List<Advert> favourites) {
         this.favourites = favourites;
