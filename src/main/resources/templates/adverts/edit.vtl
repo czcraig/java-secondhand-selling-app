@@ -1,6 +1,6 @@
 <h1>Update Advert</h1>
 
-<form action="/adverts" method="post">
+<form action="/adverts/$advert.getId()" method="post">
 
     <label for="title">Title</label>
     <input type="text" id="title" name="title" required="true" value="$advert.getTitle()">
@@ -9,9 +9,12 @@
     <input type="text" id="description" name="description" required="true" value="$advert.getDescription()">
 
     <label for="category">Category</label>
-    <select id="category" name="category" value="$category.getValue()">
+    <select id="category" name="category">
         #foreach ($category in $categories)
-        <option value="$category.getValue() selected if $advert.getCategory.getValue()" > $category.getValue()</option>
+        #if(($advert.getCategory().getValue())== $category.getValue())
+        <option selected value="$category.getValue()"> $category.getValue()</option>
+        #else <option value="$category.getValue()"> $category.getValue()</option>
+        #end
         #end
     </select>
 
