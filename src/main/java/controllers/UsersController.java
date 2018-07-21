@@ -5,16 +5,19 @@ import db.DBAdvert;
 import db.DBHelper;
 import db.DBUser;
 import models.Advert;
+import models.CategoryType;
 import models.User;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.get;
+import static spark.Spark.post;
 
 public class UsersController {
 
@@ -69,5 +72,31 @@ public class UsersController {
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());
+
+
+//        NEW
+        get("/users/new", (request, response) -> {
+//
+            Map<String, Object> model = new HashMap();
+            model.put("template", "templates/users/create.vtl");
+            return new ModelAndView(model, "templates/layout.vtl");
+
+        }, new VelocityTemplateEngine());
+
+//      CREATE
+        post("/users", (req, res) -> {
+
+            String name = req.queryParams("name");
+            String email = req.queryParams("email");
+            User newUser = new User( name, email);
+            DBHelper.save(newUser);
+
+
+            res.redirect("/users");
+
+            return null;
+        }, new VelocityTemplateEngine());
+
+
     }
 }

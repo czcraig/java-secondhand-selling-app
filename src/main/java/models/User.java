@@ -15,6 +15,7 @@ public class User {
     private String email;
     private List<Advert> selling;
     private List<Advert> favourites;
+    private int rating;
 
     public User() {
     }
@@ -83,5 +84,14 @@ public class User {
 
     public void addAdvertToFavourites(Advert advert) {
         favourites.add(advert);
+    }
+
+    @Column(name = "rating")
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 }
