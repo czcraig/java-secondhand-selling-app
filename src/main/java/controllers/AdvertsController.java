@@ -185,6 +185,8 @@ public class AdvertsController {
             int advertId = Integer.parseInt(request.params(":id"));
             Advert advert = DBHelper.find(Advert.class, advertId);
             model.put("advert", advert);
+            List<User> users = DBHelper.getAll(User.class);
+            model.put("users", users);
 //
             return new ModelAndView(model, "templates/layout.vtl");
 
