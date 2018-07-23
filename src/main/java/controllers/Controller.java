@@ -1,8 +1,6 @@
 package controllers;
 
-import db.DBHelper;
 import db.Seeds;
-import models.Advert;
 import models.CategoryType;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;

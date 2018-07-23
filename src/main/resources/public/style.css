@@ -142,3 +142,80 @@ padding: 2vh;
  height: 5vh;
 }
 
+input[type='checkbox']
+    {
+    display: none;
+    }
+
+
+
+/*HEART ICON*/
+
+id="heart"] {
+  opacity:0;
+  position: absolute;
+  left: -100vw;
+}
+
+[for="heart"] {
+  color: #aab8c2;
+  cursor: pointer;
+  font-size: 1.30em;
+  margin: 2px;
+  align-self: center;
+  transition: color 0.2s ease-in-out;
+}
+
+[for="heart"]:hover {
+  color: grey;
+}
+
+[for="heart"]::selection {
+  color: none;
+  background: transparent;
+}
+
+[for="heart"]::moz-selection {
+  color: none;
+  /*background: transparent;*/
+  opacity:0;
+}
+
+[id="heart"]:checked + label {
+  color: #e2264d;
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+}
+
+
+
+@keyframes heart {0%, 17.5% {font-size: 0;}}
+
+
+
+
+
+/*
+.heart-icon{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    z-index: -1;
+    width: 30px;
+    height: 30px;
+    background: url('./heart1.png');
+
+*/
+
+.heart-icon:hover{
+background-position 0 0;
+
+}
+
+
+
+
+
+
+
+

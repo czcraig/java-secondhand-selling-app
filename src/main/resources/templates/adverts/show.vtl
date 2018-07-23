@@ -15,6 +15,8 @@
         <th>Advert Status</th>
         <th>Seller's Name</th>
         <th>Seller's Email Address</th>
+        <th>Favourited by</th>
+
 
     </tr>
 
@@ -29,10 +31,43 @@
         <td>$advert.getAdStatus()</td>
         <td>$advert.getSeller().getName()</td>
         <td>$advert.getSeller().getEmail()</td>
+        </select>
 
 
-        <td><a href="/adverts/$advert.getId()/edit">Edit</a></td>
+
+
+        <form class="favourites" action="/adverts/$advert.getId()" method="post"></td>
+            <label for="favourited-by">Favourited by</label>
+        <select id="favourited-by" name="favourited-by">
+            #foreach ($user in $users)
+            <option value="$user.getName()"> $user.getName()</option>
+            #end
+           </select>
+
+
+            <!--<span class="favourites">-->
+                <input id="heart" type="checkbox" />
+<label for="heart">❤</label>
+</span>
+
+
+
+
+            <!--<label for="favourite-input" class="favourite-icon"></label>-->
+
+
+
+
+
+
+
+            <input type="Submit" value="Select as Favourite">
+            </form>
+
+
+
     </tr>
 </table>
+
 
     </div>
