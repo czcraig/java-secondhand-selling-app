@@ -59,6 +59,11 @@ padding: 2vh;
       padding: 5px;
       margin: 5px;
       display: inline-block;
+      font-size: 30px;
+      width: 30vh;
+      height: 20vh;
+      justify: space-around;
+      float: center;
   }
 
 .button:hover {
@@ -66,7 +71,11 @@ padding: 2vh;
      background-color: #3ab795;
      padding: 5px;
      display: inline-block;
-
+     font-size: 30px;
+     width: 30vh;
+     height: 20vh;
+     justify: space-around;
+     float: center;
   }
 
   th {
@@ -142,3 +151,6 @@ padding: 2vh;
  height: 5vh;
 }
 
+.search-box {
+float: right;
+}
