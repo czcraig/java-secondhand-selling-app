@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51c925b8-5226-4c6d-8438-3077331dbbfe" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/like.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/adverts/searches/no_results.vtl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/adverts/searches/results.vtl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/public/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/public/like.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/adverts/searches/no_results.vtl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/adverts/searches/results.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AdvertsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AdvertsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adverts/show.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adverts/show.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/AdvertsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/AdvertsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/adverts/show.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adverts/show.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.vtl" afterDir="false" />
-    </list>
+    <list default="true" id="51c925b8-5226-4c6d-8438-3077331dbbfe" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,8 +101,8 @@
       <file leaf-file-name="layout.vtl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.vtl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="197">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -973,8 +955,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.vtl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="197">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
