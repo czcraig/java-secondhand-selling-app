@@ -1,5 +1,52 @@
-.logo{
+* {
+margin: 0px;
+padding: 0px;
 }
+
+.container {
+margin: auto;
+padding: 5vh;
+}
+
+.logo{
+height: 12vh;
+justify: left;
+float: left;
+align: left;
+
+}
+
+header {
+background-color: #3ab795;
+}
+
+nav {
+padding: 2vh;
+}
+ ul {
+ list-style-type: none;
+  justify-content: space-around;
+  align-content: center;
+  display: flex;
+  font-weight: bold;
+
+  }
+
+  li {
+  display: flex;
+  justify: space;
+  color: white;
+  }
+
+  .nav-link{
+  color: white;
+  margin-top: 5vh;
+  }
+
+  a {
+  text-decoration: none;
+    color: #0a2342;
+  }
 
 .rating {
     overflow: hidden;
