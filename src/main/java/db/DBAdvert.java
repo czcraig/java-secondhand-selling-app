@@ -6,6 +6,7 @@ import models.User;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
@@ -52,13 +53,13 @@ public class DBAdvert {
         return adverts;
     }
 
-    public static List<Advert> getLocationsAdverts(String location){
+    public static List<Advert> getAdvertsForLocation(String location){
         session = HibernateUtil.getSessionFactory().openSession();
         List<Advert> adverts = null;
 
         try {
             Criteria cr = session.createCriteria(Advert.class);
-            cr.add(Restrictions.eq("location", location));
+            cr.add(Restrictions.ilike("location", location, MatchMode.ANYWHERE));
             adverts = cr.list();
         }
         catch (HibernateException ex){
@@ -67,7 +68,6 @@ public class DBAdvert {
         finally {
             session.close();
         }
-
         return adverts;
     }
 

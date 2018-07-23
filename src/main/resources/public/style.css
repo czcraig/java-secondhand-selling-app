@@ -29,23 +29,59 @@ padding: 2vh;
   align-content: center;
   display: flex;
   font-weight: bold;
-
+  align-items: center;
   }
 
   li {
   display: flex;
   justify: space;
   color: white;
+
   }
 
   .nav-link{
   color: white;
-  margin-top: 5vh;
+  float: center;
+  position: relative;
+ font-family: 'Raleway', sans-serif;
+  font-size: 18px;
   }
 
   a {
   text-decoration: none;
-    color: #0a2342;
+    color:white;
+  }
+
+.button {
+      color: black;
+      background-color: white;
+      border: 2px solid #3ab795;
+      padding: 5px;
+      margin: 5px;
+      display: inline-block;
+  }
+
+.button:hover {
+     color:white;
+     background-color: #3ab795;
+     padding: 5px;
+     display: inline-block;
+
+  }
+
+  th {
+    padding: 1vh;
+    text-align: left;
+  }
+  td {
+    padding: 2vh;
+    text-align: left;
+  }
+
+  table {
+    align-content: left;
+    display: flex;
+    justify-content: space-around;
   }
 
 .rating {

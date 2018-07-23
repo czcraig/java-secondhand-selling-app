@@ -1,5 +1,6 @@
 package controllers;
 
+import com.sun.xml.internal.xsom.impl.scd.Iterators;
 import db.DBAdvert;
 import db.DBHelper;
 import models.Advert;
@@ -35,6 +36,21 @@ public class AdvertsController {
             List<Advert> adverts = DBHelper.getAll(Advert.class);
             model.put("adverts", adverts);
             return new ModelAndView(model, "templates/layout.vtl");
+        }, new VelocityTemplateEngine());
+
+//       search by location
+        post("/adverts/found_adverts", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String location = request.queryParams("search_terms");
+           List<Advert> found_adverts = DBAdvert.getAdvertsForLocation(location);
+            if (found_adverts.size() == 0){
+                model.put("template", "templates/adverts/searches/noresults.vtl");}
+            else {
+                model.put("template", "templates/adverts/searches/results.vtl");
+                model.put("found_adverts", found_adverts);
+            }
+            return new ModelAndView(model, "templates/layout.vtl");
+
         }, new VelocityTemplateEngine());
 
 //        CARS
