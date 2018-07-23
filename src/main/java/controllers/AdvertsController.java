@@ -44,7 +44,7 @@ public class AdvertsController {
             String location = request.queryParams("search_terms");
            List<Advert> found_adverts = DBAdvert.getAdvertsForLocation(location);
             if (found_adverts.size() == 0){
-                model.put("template", "templates/adverts/searches/noresults.vtl");}
+                model.put("template", "templates/adverts/searches/no_results.vtl");}
             else {
                 model.put("template", "templates/adverts/searches/results.vtl");
                 model.put("found_adverts", found_adverts);

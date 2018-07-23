@@ -2,26 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51c925b8-5226-4c6d-8438-3077331dbbfe" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/favourite-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/heart1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/public/heart2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/public/favourite-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/public/heart1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/public/heart2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/like.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/adverts/searches/no_results.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/adverts/searches/results.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/public/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/public/like.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/adverts/searches/no_results.vtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/adverts/searches/results.vtl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AdvertsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AdvertsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/Seeds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Seeds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adverts/show.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adverts/show.vtl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/AdvertsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/AdvertsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/Seeds.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/Seeds.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/adverts/show.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/adverts/show.vtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.vtl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.vtl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,8 +32,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="61" column="3" lean-forward="true" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+            <state relative-caret-position="212">
+              <caret line="66" column="3" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -58,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/models/Advert.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="99">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,11 +62,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdvertsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdvertsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AdvertsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-20">
-              <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Java_Project.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Java_Project.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -79,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/db/DBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="430">
-              <caret line="72" column="54" lean-forward="true" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
+              <caret line="72" column="54" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#find#0;class#DBHelper#0" />
@@ -92,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adverts/index.vtl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="26" column="12" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="26" selection-end-column="12" />
+              <caret line="26" column="12" selection-start-line="15" selection-start-column="8" selection-end-line="26" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -101,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adverts/show.vtl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
-              <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -110,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.vtl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -174,6 +184,7 @@
         <option value="$PROJECT_DIR$/src/main/java/controllers/AdvertsController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" />
         <option value="$PROJECT_DIR$/src/main/resources/public/style.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -620,38 +631,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/models/AdvertTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1587#1588#0" expanded="true" />
-            <element signature="e#1617#1618#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/db/Seeds.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
@@ -947,7 +926,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adverts/index.vtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="26" selection-end-column="12" />
+          <caret line="26" column="12" selection-start-line="15" selection-start-column="8" selection-end-line="26" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -961,7 +940,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adverts/show.vtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
-          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -985,7 +964,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Advert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -995,21 +974,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layout.vtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="61" column="3" lean-forward="true" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+        <state relative-caret-position="212">
+          <caret line="66" column="3" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/db/DBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
-          <caret line="72" column="54" lean-forward="true" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
+          <caret line="72" column="54" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#find#0;class#DBHelper#0" />
@@ -1020,7 +999,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AdvertsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-20">
-          <caret line="46" column="38" lean-forward="true" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java_Project.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
