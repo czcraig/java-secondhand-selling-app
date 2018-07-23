@@ -5,13 +5,10 @@ import db.DBAdvert;
 import db.DBHelper;
 import db.DBUser;
 import models.Advert;
-import models.CategoryType;
 import models.User;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
-
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
