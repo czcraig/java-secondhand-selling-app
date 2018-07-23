@@ -34,17 +34,40 @@
         </select>
 
 
-        <label for="favourited-by">Favourited by</label>
+
+
+        <form class="favourites" action="/adverts/$advert.getId()" method="post"></td>
+            <label for="favourited-by">Favourited by</label>
         <select id="favourited-by" name="favourited-by">
             #foreach ($user in $users)
-            <option value="$users.getName"> $user.getName()</option>
+            <option value="$user.getName()"> $user.getName()</option>
             #end
-        <td><a href="/adverts/$advert.getId()/edit">Edit</a></td>
+           </select>
 
+
+            <!--<span class="favourites">-->
+                <input id="heart" type="checkbox" />
+<label for="heart">❤</label>
+</span>
+
+
+
+
+            <!--<label for="favourite-input" class="favourite-icon"></label>-->
+
+
+
+
+
+
+
+            <input type="Submit" value="Select as Favourite">
+            </form>
 
 
 
     </tr>
 </table>
+
 
     </div>
