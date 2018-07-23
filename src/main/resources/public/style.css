@@ -1,3 +1,6 @@
+.logo{
+}
+
 .rating {
     overflow: hidden;
     display: inline-block;
@@ -18,7 +21,7 @@
     display: block;
     width: 16px;
     height: 16px;
-    background: url('/samples/star-rating/star.png') 0 -16px;
+    background: url('/star.png') 0 -16px;
 }
 
 .rating-star:hover {
@@ -38,3 +41,21 @@
     height: 16px;
     background: url('/star.png') 0 -16px;
 }
+
+
+#display-rating-1 {
+ height: 5vh;
+}
+#display-rating-2 {
+ height: 5vh;
+}
+#display-rating-3 {
+ height: 5vh;
+}
+#display-rating-4 {
+ height: 5vh;
+}
+#display-rating-5 {
+ height: 5vh;
+}
+
