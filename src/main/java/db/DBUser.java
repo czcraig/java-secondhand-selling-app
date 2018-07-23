@@ -36,4 +36,9 @@ public class DBUser {
 
         return adverts;
     }
+
+    public static void addRatingToUser(User user, int rating){
+        user.setRating(rating);
+        DBHelper.update(user);
+    }
 }

@@ -36,16 +36,7 @@ public class UsersController {
         }, new VelocityTemplateEngine());
 
 
-        get("/users/:id", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
 
-            model.put("template", "templates/users/show.vtl");
-            int userId = Integer.parseInt(request.params(":id"));
-            User user = DBHelper.find(User.class, userId);
-            model.put("user", user);
-            return new ModelAndView(model, "templates/layout.vtl");
-
-        }, new VelocityTemplateEngine());
 
         get("/users/:id/selling", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
@@ -83,6 +74,17 @@ public class UsersController {
 
         }, new VelocityTemplateEngine());
 
+        get("/users/:id", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+
+            model.put("template", "templates/users/show.vtl");
+            int userId = Integer.parseInt(request.params(":id"));
+            User user = DBHelper.find(User.class, userId);
+            model.put("user", user);
+            return new ModelAndView(model, "templates/layout.vtl");
+
+        }, new VelocityTemplateEngine());
+
 //      CREATE
         post("/users", (req, res) -> {
 
@@ -115,16 +117,12 @@ public class UsersController {
         // UPDATE
         post("users/:id", (request, response) -> {
             int userId = Integer.parseInt(request.params(":id"));
+            User userToUpdate = DBHelper.find(User.class, userId);
 
-            String name = request.queryParams("name");
-            String email = request.queryParams("email");
-            int rating = Integer.parseInt(request.queryParams("rating"));
-            User user = DBHelper.find(User.class, userId);
+            int rating = Integer.parseInt(request.queryParams("rating-input-1"));
 
-            user.setName(name);
-            user.setEmail(email);
-            user.setRating(rating);
-            DBHelper.update(user);
+            userToUpdate.setRating(rating);
+            DBHelper.update(userToUpdate);
 
             response.redirect("/users");
 

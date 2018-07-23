@@ -15,15 +15,17 @@
         <tr>
             <td>$user.getName()</td>
             <td>$user.getEmail()</td>
-            #if ($user.getRating() == 1)
+            #if ($user.getRating() == 0)
+            <td></td>
+            #elseif ($user.getRating() == 1)
             <td><img src="/1star.png" ></td>
-            #else ($user.getRating() == 2)
+            #elseif  ($user.getRating() == 2)
             <td><img src="/2star.png" ></td>
-            #else ($user.getRating() == 3)
+            #elseif ($user.getRating() == 3)
             <td><img src="/3star.png" ></td>
-            #else ($user.getRating() == 4)
+            #elseif ($user.getRating() == 4)
             <td><img src="/4star.png" ></td>
-            #else($user.getRating() == 5)
+            #elseif ($user.getRating() == 5)
             <td><img src="/5star.png" ></td>
             #end
             <td><a href="/users/$user.getId()">SHOW</a></td>

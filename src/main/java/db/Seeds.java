@@ -54,5 +54,9 @@ public class Seeds {
         DBUser.addFavouriteAdToUser(user1, advert10);
         DBUser.addFavouriteAdToUser(user1, advert9);
 
+        DBUser.addRatingToUser(user1,3);
+        DBUser.addRatingToUser(user2,1);
+        DBUser.addRatingToUser(user3,5);
+
     }
 }
