@@ -2,7 +2,6 @@
 
 <div class="container">
     <div class="wrapper">
-<<<<<<< HEAD
 
             #foreach($advert in $adverts)
         <div class="advert-item">
@@ -11,7 +10,6 @@
             <div class="nested">£$advert.getPrice()0</div>
             <div class="nested">$advert.getLocation()</div>
         </div>
-=======
         #foreach($advert in $adverts)
             #if (!$advert.getDeleted())
                 <div class="advert-item">
@@ -22,7 +20,6 @@
                     <div class="nested">$advert.getLocation()</div>
                 </div>
             #end
->>>>>>> f5b00f80e721d482bd30bb597c57582c197e9ef9
         #end
     </div>
 </div>
