@@ -43,10 +43,10 @@ public class AdvertsController {
         post("/adverts/found_adverts", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String location = request.queryParams("search_terms");
-           List<Advert> found_adverts = DBAdvert.getAdvertsForLocation(location);
-            if (found_adverts.size() == 0){
-                model.put("template", "templates/adverts/searches/no_results.vtl");}
-            else {
+            List<Advert> found_adverts = DBAdvert.getAdvertsForLocation(location);
+            if (found_adverts.size() == 0) {
+                model.put("template", "templates/adverts/searches/no_results.vtl");
+            } else {
                 model.put("template", "templates/adverts/searches/results.vtl");
                 model.put("found_adverts", found_adverts);
             }
@@ -155,7 +155,6 @@ public class AdvertsController {
         }, new VelocityTemplateEngine());
 
 
-
 //        NEW
         get("/adverts/new", (request, response) -> {
 //
@@ -176,13 +175,13 @@ public class AdvertsController {
             String categoryValue = req.queryParams("category");
             CategoryType category = CategoryType.valueOf(categoryValue.toUpperCase());
             double price = Double.parseDouble(req.queryParams("price"));
-            String location =  req.queryParams("location");
-            String sellerName =  req.queryParams("seller_name");
+            String location = req.queryParams("location");
+            String sellerName = req.queryParams("seller_name");
             String newEmail = req.queryParams("email");
-            User newUser = new User( sellerName, newEmail);
+            User newUser = new User(sellerName, newEmail);
             DBHelper.save(newUser);
-            String imageUrl =  req.queryParams("image_url");
-            String adStatus =  req.queryParams("ad_status");
+            String imageUrl = req.queryParams("image_url");
+            String adStatus = req.queryParams("ad_status");
 
             Advert newAdvert = new Advert(title, description, category, price, location, newUser, imageUrl, adStatus);
             DBHelper.save(newAdvert);
@@ -225,7 +224,7 @@ public class AdvertsController {
         }, new VelocityTemplateEngine());
 
 
-        post("/adverts/:id/favourites", (request, response) ->{
+        post("/adverts/:id/favourites", (request, response) -> {
             int advertId = Integer.parseInt(request.params(":id"));
             int userId = Integer.parseInt(request.queryParams("favourited-by"));
             Advert advert = DBHelper.find(Advert.class, advertId);
@@ -244,13 +243,13 @@ public class AdvertsController {
             String categoryValue = request.queryParams("category");
             CategoryType category = CategoryType.valueOf(categoryValue.toUpperCase());
             double price = Double.parseDouble(request.queryParams("price"));
-            String location =  request.queryParams("location");
-            String sellerName =  request.queryParams("seller_name");
+            String location = request.queryParams("location");
+            String sellerName = request.queryParams("seller_name");
             String newEmail = request.queryParams("email");
-            User newUser = new User( sellerName, newEmail);
+            User newUser = new User(sellerName, newEmail);
             DBHelper.save(newUser);
-            String imageUrl =  request.queryParams("image_url");
-            String adStatus =  request.queryParams("ad_status");
+            String imageUrl = request.queryParams("image_url");
+            String adStatus = request.queryParams("ad_status");
 
 
             Advert advert = DBHelper.find(Advert.class, advertId);
@@ -269,6 +268,17 @@ public class AdvertsController {
             return null;
         }, new VelocityTemplateEngine());
 
-    }
 
+        // Delete
+        post("adverts/:id/delete", (request, response) -> {
+            int advertId = Integer.parseInt(request.params(":id"));
+            Advert advert = DBHelper.find(Advert.class, advertId);
+            advert.deleteAdvert();
+            DBHelper.update(advert);
+
+            response.redirect("/adverts");
+            return null;
+        }, new VelocityTemplateEngine());
+
+    }
 }
