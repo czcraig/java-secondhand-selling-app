@@ -33,7 +33,7 @@ public class Seeds {
         Advert advert4 = new Advert("Ford Focus for Sale", "Good condition Blue", CategoryType.CARS, 375.00, "Edinburgh", user1, "/Ford_Focus.jpg", "For Sale");
         DBHelper.save(advert4);
 
-        Advert advert5 = new Advert("Sofa for Sale", "Good condition and comfy leather sofa", CategoryType.FURNITURE, 150.00, "Glasgow", user2, "/leather_corner_sofa.jpg", "For Sale");
+        Advert advert5 = new Advert("Sofa for Sale", "Good condition and comfy leather sofa", CategoryType.FURNITURE, 150.00, "Glasgow", user2, "/sofa.jpg", "For Sale");
         DBHelper.save(advert5);
 
         Advert advert6 = new Advert("Kettle for Sale", "Pretty good condition", CategoryType.APPLIANCES, 5.00, "Edinburgh", user2, "/kettle.jpeg", "For Sale");
@@ -46,25 +46,25 @@ public class Seeds {
         Advert advert9 = new Advert("Dress", "Fantastic condition, only wore once", CategoryType.CLOTHES, 20.00, "Aberdeen", user3, "/dress.jpg", "For Sale");
         DBHelper.save(advert9);
 
-        Advert advert10 = new Advert("Ninja Turtle figure", "its a toy", CategoryType.TOYS, 5.00, "Fife", user3, "/TMNT toy.jpg", "For Sale");
+        Advert advert10 = new Advert("Ninja Turtle figures", "its a toy", CategoryType.TOYS, 5.00, "Fife", user3, "/TMNT toy.jpg", "For Sale");
         DBHelper.save(advert10);
 
         Advert advert11 = new Advert("Bmx for sale",  "still in good condition, just dont have time to use it anymore", CategoryType.BICYCLES, 80.00, "Fife", user3, "/bmx.jpeg", "For Sale");
         DBHelper.save(advert11);
 
-        Advert advert12 = new Advert("Acoustic guitar",  "Merida Trajan T-5 Classical Guitar - Natural", CategoryType.INSTRUMENTS, 120.00, "Fife", user2, "/acoustic_guitar.jpg", "For Sale");
+        Advert advert12 = new Advert("Acoustic guitar",  "Merida Trajan T-5 Classical Guitar - Natural", CategoryType.INSTRUMENTS, 120.00, "Fife", user2, "/acoustic guitar.jpg", "For Sale");
         DBHelper.save(advert12);
 
         Advert advert13 = new Advert("Free lamp", "still reasonably good condition, free to good home", CategoryType.FREE, 0.00, "Glasgow", user1, "/lamp.jpg", "For Sale");
         DBHelper.save(advert13);
 
-        Advert advert14 = new Advert("Toaster for sale", "barely used, 4 slice toaster", CategoryType.APPLIANCES, 30.00, "Fife", user3, "public/images/toaster.jpg", "For Sale");
+        Advert advert14 = new Advert("Toaster for sale", "barely used, 4 slice toaster", CategoryType.APPLIANCES, 30.00, "Fife", user3, "/toaster.jpg", "For Sale");
         DBHelper.save(advert14);
 
         Advert advert15 = new Advert("Shirt for sale", "Medium mans shirt, never worn", CategoryType.CLOTHES, 15.00, "Dundee", user1, "/shirt.jpeg", "For Sale");
         DBHelper.save(advert15);
 
-        Advert advert16 = new Advert("Leather corner couch for sale", "really good condition, only a few years old", CategoryType.FURNITURE, 500.00, "Fife", user2, "public/images/couch.jpg", "For Sale");
+        Advert advert16 = new Advert("Leather corner couch for sale", "really good condition, only a few years old", CategoryType.FURNITURE, 500.00, "Fife", user2, "/leather_corner_sofa.jpeg", "For Sale");
         DBHelper.save(advert16);
 
         Advert advert17 = new Advert("Ipad for sale", "still in reasonable condition, older model but still works well.", CategoryType.TECHNOLOGY, 65.00, "Glasgow", user3, "/ipad.jpeg", "For Sale");
@@ -76,7 +76,7 @@ public class Seeds {
         Advert advert19 = new Advert("Leather jacket", "bit worn but quality leather jacket", CategoryType.CLOTHES, 70.00, "Aberdeen", user2, "/leather_jacket.jpg", "For Sale");
         DBHelper.save(advert19);
 
-        Advert advert20 = new Advert("Toy car", "in perfect working order", CategoryType.TOYS, 15.00, "Dundee", user1, "/toy_cars.jpeg", "For Sale");
+        Advert advert20 = new Advert("Toy cars", "in perfect working order", CategoryType.TOYS, 4.00, "Dundee", user1, "/toy_cars.jpeg", "For Sale");
         DBHelper.save(advert20);
 
         Advert advert21 = new Advert("Mountain bike for sale",  "unwanted xmas present", CategoryType.BICYCLES, 150.00, "Fife", user2, "/mountain_bike.jpeg", "For Sale");
@@ -88,7 +88,7 @@ public class Seeds {
         Advert advert23 = new Advert("Tv stand", "still reasonably good condition, free to good home", CategoryType.FREE, 0.00, "Aberdeen", user3, "/tv_stand.jpeg", "For Sale");
         DBHelper.save(advert23);
 
-        Advert advert24 = new Advert("Microwave for sale", "cheap and in good condition", CategoryType.APPLIANCES, 15.00, "Glasgow", user2, "public/images/micorwave.jpg", "For Sale");
+        Advert advert24 = new Advert("Microwave for sale", "cheap and in good condition", CategoryType.APPLIANCES, 15.00, "Glasgow", user2, "/microwave.jpeg", "For Sale");
         DBHelper.save(advert24);
 
         Advert advert25 = new Advert("leather belt", "quality leather, size 32 man", CategoryType.CLOTHES, 5.00, "Dundee", user1, "/belt.jpeg", "For Sale");
