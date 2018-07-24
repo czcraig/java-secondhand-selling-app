@@ -1,10 +1,13 @@
 <h1>Buy on Banana Tree</h1>
 
 <div class="container">
-    <table>
-        <td>
-#foreach($category in $categories) <a href="/adverts/$category.getValue().toLowerCase()">$category.getValue()</a>
+    <div class="wrapper">
+
+#foreach($category in $categories)
+        <div class="advert-item">
+        <a href="/adverts/$category.getValue().toLowerCase()">$category.getValue()</a>
+        </div>
 #end
-        </td>
-    </table>
+
+    </div>
 </div>
