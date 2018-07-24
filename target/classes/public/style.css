@@ -65,14 +65,15 @@ padding: 2vh;
       padding: 5px;
       margin: 5px;
       display: inline-block;
-      font-size: 30px;
-      width: 30vh;
+      font-size: 8vh;
+      width: 40vh;
       height: 20vh;
       border-radius: 8px;
       text-align: center;
       position: relative;
       justify-content: center;
       align-items: center;
+      padding-top: 10vh;
   }
 
 .button:hover {
@@ -80,15 +81,17 @@ padding: 2vh;
      background-color: #3ab795;
      padding: 5px;
      display: inline-block;
-     font-size: 30px;
-     width: 30vh;
+     font-size: 8vh;
+     width: 40vh;
      height: 20vh;
      border-radius: 8px;
      text-align: center;
      position: relative;
      justify-content: center;
      align-items: center;
+     padding-top: 10vh;
   }
+
 
   th {
     padding: 2vh;
