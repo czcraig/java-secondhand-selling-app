@@ -15,7 +15,7 @@
         <th>Advert Status</th>
         <th>Seller's Name</th>
         <th>Seller's Email Address</th>
-        <th>Favourited by</th>
+
 
 
     </tr>
@@ -31,7 +31,7 @@
         <td>$advert.getAdStatus()</td>
         <td>$advert.getSeller().getName()</td>
         <td>$advert.getSeller().getEmail()</td>
-<<<<<<< HEAD
+
         </select>
 
 
@@ -39,7 +39,7 @@
 
         <form class="favourites" action="/adverts/$advert.getId()" method="post"></td>
             <label for="favourited-by">Favourited by</label>
-        <select id="favourited-by" name="favourited-by">
+        <select id="favourited-by" name="favourited_by">
             #foreach ($user in $users)
             <option value="$user.getName()"> $user.getName()</option>
             #end
@@ -67,9 +67,9 @@
 
 
 
-=======
+
         <td><a href="/adverts/$advert.getId()/edit">Edit</a></td>
->>>>>>> feature/search
+
     </tr>
 </table>
 

@@ -241,6 +241,7 @@ public class AdvertsController {
             String imageUrl =  request.queryParams("image_url");
             String adStatus =  request.queryParams("ad_status");
 
+
             Advert advert = DBHelper.find(Advert.class, advertId);
 
             advert.setTitle(title);
