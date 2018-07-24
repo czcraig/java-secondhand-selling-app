@@ -1,6 +1,7 @@
 * {
 margin: 0px;
 padding: 0px;
+font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -9,7 +10,7 @@ padding: 5vh;
 }
 
 .logo{
-height: 12vh;
+height: 10vh;
 justify: left;
 float: left;
 align: left;
@@ -18,6 +19,10 @@ align: left;
 
 header {
 background-color: #3ab795;
+}
+
+h1 {
+ font-family: 'Roboto', sans-serif;
 }
 
 nav {
@@ -44,26 +49,30 @@ padding: 2vh;
   float: center;
   position: relative;
  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  margin-top: 5px;
   }
 
   a {
   text-decoration: none;
-
+  color: #3ab795;
   }
 
 .button {
       color: black;
       background-color: white;
-      border: 2px solid #3ab795;
+      border: 5px solid #3ab795;
       padding: 5px;
       margin: 5px;
       display: inline-block;
       font-size: 30px;
       width: 30vh;
       height: 20vh;
-      justify: space-around;
-      float: center;
+      border-radius: 8px;
+      text-align: center;
+      position: relative;
+      justify-content: center;
+      align-items: center;
   }
 
 .button:hover {
@@ -74,14 +83,18 @@ padding: 2vh;
      font-size: 30px;
      width: 30vh;
      height: 20vh;
-     justify: space-around;
-     float: center;
+     border-radius: 8px;
+     text-align: center;
+     position: relative;
+     justify-content: center;
+     align-items: center;
   }
 
   th {
-    padding: 1vh;
+    padding: 2vh;
     text-align: left;
   }
+
   td {
     padding: 2vh;
     text-align: left;
@@ -151,11 +164,10 @@ padding: 2vh;
  height: 5vh;
 }
 
-
-
 input[type='checkbox']
     {
-    display: none;
+    display: hidden;
+    opacity:0;
     }
 
 
@@ -205,30 +217,48 @@ id="heart"] {
 
 
 
-
-/*
-.heart-icon{
-    cursor: pointer;
-    position: relative;
-    display: block;
-    z-index: -1;
-    width: 30px;
-    height: 30px;
-    background: url('./heart1.png');
-
-*/
-
 .heart-icon:hover{
 background-position 0 0;
 
 }
 
 
-
-
-
 .search-box {
 float: right;
 }
 
+
+.wrapper{
+ display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+
+   }
+
+.advert-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 2vh;
+}
+
+.nested {
+grid-row-start: 1;
+ grid-row-end: 5;
+ justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box {
+ display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+
+img {
+repeat: none;
+height: 30vh;}
 

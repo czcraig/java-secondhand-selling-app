@@ -7,7 +7,6 @@ public enum CategoryType {
     BICYCLES("Bicycles"),
     FURNITURE("Furniture"),
     TECHNOLOGY("Technology"),
-    SPORTS("Sports"),
     INSTRUMENTS("Instruments"),
     CLOTHES("Clothes"),
     APPLIANCES("Appliances"),
