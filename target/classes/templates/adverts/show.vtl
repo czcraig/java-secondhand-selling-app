@@ -3,58 +3,37 @@
 
 <div class="container">
 
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Image</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Location</th>
-        <th>Updated On</th>
-        <th>Advert Status</th>
-        <th>Seller's Name</th>
-        <th>Seller's Email Address</th>
+    <div class="single-advert-item">
 
-
-
-    </tr>
-
-    <tr>
-        <td>$advert.getTitle()</td>
-        <th>$advert.getDescription()</th>
-        <td><img src="$advert.getImageUrl()"></td>
-        <td>$advert.getCategory().getValue()</td>
-        <td>£$advert.getPrice()0</td>
-        <td>$advert.getLocation()</td>
-        <td>$advert.getUpdatedAt()</td>
-        <td>$advert.getAdStatus()</td>
-        <td>$advert.getSeller().getName()</td>
-        <td>$advert.getSeller().getEmail()</td>
-
-        </select>
-
-
-
+        <div class="nested-2"><h2>$advert.getTitle()</h2></div>
+        <div class="nested-2"><img class="single-image" src="$advert.getImageUrl()"></div>
+        <div class="nested-2">£$advert.getPrice()0</div>
+        <div class="nested-2">Location: $advert.getLocation()</div>
+        <div class="nested-2">Description: $advert.getDescription()</div>
+        <div class="nested-2">Advert Status: $advert.getAdStatus()</div>
+        <div class="nested-2">Category: <a href="/adverts/$advert.getCategory().getValue().toLowerCase()">$advert.getCategory().getValue()</a></div>
+        <div class="nested-2">Updated On: $advert.getUpdatedAt()</div>
+        <div class="nested-2">Seller: $advert.getSeller().getName()</div>
+        <div class="nested-2">Contact Details: $advert.getSeller().getEmail()</div>
 
         <form class="favourites" action="/adverts/$advert.getId()/favourites" method="post"></td>
             <label for="favourited-by">Favourited by</label>
-        <select id="favourited-by" name="favourited-by">
-            #foreach ($user in $users)
-            <option value="$user.getId()"> $user.getName()</option>
-            #end
-           </select>
-
-
-                <input id="heart" type="checkbox" />
-<label for="heart">❤</label>
-</span>
-
-
-
+            <select id="favourited-by" name="favourited-by">
+                #foreach ($user in $users)
+                <option value="$user.getId()"> $user.getName()</option>
+                #end
+            </select>
+            <input id="heart" type="checkbox"/>
+            <label for="heart">❤</label>
             <input type="Submit" value="Select as Favourite">
+<<<<<<< HEAD
+=======
+        </form>
+>>>>>>> develop
 
+        <div class="nested-2"><a href="/adverts/$advert.getId()/edit">Edit</a></div>
 
+<<<<<<< HEAD
             <td><input formaction="/adverts/$advert.getId()/delete" type="submit" value="Delete"></td>
 
 
@@ -65,5 +44,10 @@
     </tr>
 </table>
 
-
+=======
     </div>
+</div>
+
+
+>>>>>>> develop
+
