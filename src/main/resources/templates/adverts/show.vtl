@@ -1,8 +1,5 @@
-<h1>Advert</h1>
-
 
 <div class="container">
-
     <div class="single-advert-item">
 
         <div class="nested-2"><h2>$advert.getTitle()</h2></div>
@@ -11,6 +8,7 @@
         <div class="nested-2">Location: $advert.getLocation()</div>
         <div class="nested-2">Description: $advert.getDescription()</div>
         <div class="nested-2">Advert Status: $advert.getAdStatus()</div>
+        <div class="nested-2">$advert.getId()</div>
         <div class="nested-2">Category: <a href="/adverts/$advert.getCategory().getValue().toLowerCase()">$advert.getCategory().getValue()</a></div>
         <div class="nested-2">Updated On: $advert.getUpdatedAt()</div>
         <div class="nested-2">Seller: $advert.getSeller().getName()</div>
