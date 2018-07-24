@@ -17,6 +17,7 @@ public class DBUser {
         user.addAdvertToFavourites(advert);
         DBHelper.update(user);
     }
+
     public static List<Advert> getUsersFavouriteAdverts(User user){
         session = HibernateUtil.getSessionFactory().openSession();
         List<Advert> adverts = null;
@@ -34,7 +35,6 @@ public class DBUser {
         finally {
             session.close();
         }
-
         return adverts;
     }
 
