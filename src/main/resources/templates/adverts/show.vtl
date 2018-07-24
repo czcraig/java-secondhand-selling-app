@@ -37,11 +37,11 @@
 
 
 
-        <form class="favourites" action="/adverts/$advert.getId()" method="post"></td>
+        <form class="favourites" action="/adverts/$advert.getId()/favourites" method="post"></td>
             <label for="favourited-by">Favourited by</label>
-        <select id="favourited-by" name="favourited_by">
+        <select id="favourited-by" name="favourited-by">
             #foreach ($user in $users)
-            <option value="$user.getName()"> $user.getName()</option>
+            <option value="$user.getId()"> $user.getName()</option>
             #end
            </select>
 

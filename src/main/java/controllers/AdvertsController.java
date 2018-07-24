@@ -3,6 +3,7 @@ package controllers;
 import com.sun.xml.internal.xsom.impl.scd.Iterators;
 import db.DBAdvert;
 import db.DBHelper;
+import db.DBUser;
 import models.Advert;
 import models.CategoryType;
 import models.User;
@@ -222,6 +223,24 @@ public class AdvertsController {
             return new ModelAndView(model, "templates/layout.vtl");
 
         }, new VelocityTemplateEngine());
+
+
+        post("/adverts/:id/favourites", (request, response) ->{
+            int advertId = Integer.parseInt(request.params(":id"));
+            int userId = Integer.parseInt(request.queryParams("favourited-by"));
+            Advert advert = DBHelper.find(Advert.class, advertId);
+            User user = DBHelper.find(User.class, userId);
+            DBUser.addFavouriteAdToUser(user, advert);
+
+            response.redirect("/adverts");
+            return null;
+        });
+
+
+
+
+
+
 
 
 
