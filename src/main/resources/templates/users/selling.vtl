@@ -7,7 +7,9 @@
 
         #foreach ($advert in $adverts)
         <div class="advert-item">
-            <a href="/adverts/$advert.getId()">$advert.getTitle()</a>
+            <div class="nested"><a href="/adverts/$advert.getId()"><img src="$advert.getImageUrl()"></a></div>
+            <div class="nested"><a href="/adverts/$advert.getId()">$advert.getTitle()</a></div>
+            <div class="nested">£$advert.getPrice()0</div>
         </div>
         #end
     </div>

@@ -23,9 +23,15 @@ background-color: #3ab795;
 
 h1 {
  font-family: 'Roboto', sans-serif;
-
+ padding: 2vh;
+}
+h2 {
+ padding: 2vh;
 }
 
+h3 {
+ padding: 2vh;
+}
 nav {
 padding: 2vh;
 }
@@ -97,16 +103,18 @@ padding: 2vh;
   th {
     padding: 2vh;
     text-align: left;
+
   }
 
   td {
     padding: 2vh;
     text-align: left;
+
   }
 
   table {
     align-content: left;
-    display: flex;
+    display: inline-block;
     justify-content: space-around;
   }
 
@@ -229,6 +237,8 @@ background-position 0 0;
 
 .search-box {
 float: right;
+margin: auto;
+padding: 5vh;
 }
 
 

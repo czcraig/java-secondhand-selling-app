@@ -108,8 +108,11 @@ public class Seeds {
 
 
 //
-        DBUser.addFavouriteAdToUser(user1, advert10);
-        DBUser.addFavouriteAdToUser(user1, advert9);
+        DBUser.addFavouriteAdToUser(user1, advert16);
+        DBUser.addFavouriteAdToUser(user1, advert22);
+        DBUser.addFavouriteAdToUser(user2, advert9);
+        DBUser.addFavouriteAdToUser(user2, advert17);
+        DBUser.addFavouriteAdToUser(user3, advert28);
 
         DBUser.addRatingToUser(user1,3);
         DBUser.addRatingToUser(user2,1);
