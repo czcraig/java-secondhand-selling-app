@@ -1,51 +1,18 @@
 <h1>All Adverts</h1>
 
 <div class="container">
-
-
-    <table>
-        <tr>
-            <th>Ad Ref.</th>
-            <th>Title</th>
-            <th>Image</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Location</th>
-
-        </tr>
-
-        #foreach($advert in $adverts)
-        <tr>
-
-            #if ($advert.getDeleted() == true)
-
-            #else
-            <td>$advert.getId()</td>
-            <td>$advert.getTitle()</td>
-            <td><img src="$advert.getImageUrl()"></td>
-            <td>$advert.getCategory().getValue()</td>
-            <td>$advert.getPrice()</td>
-            <td>$advert.getLocation()</td>
-
-            <td><a href="/adverts/$advert.getId()">SHOW</a></td>
-        </tr>
-        #end
-        #end
-
     <div class="wrapper">
-
-            #foreach($advert in $adverts)
-        <div class="advert-item">
-            <!--<div class="nested">$advert.getId()</div>-->
-            <div class="nested"><a href="/adverts/$advert.getId()"><img src="$advert.getImageUrl()"></a></div>
-            <div class="nested"><a href="/adverts/$advert.getId()">$advert.getTitle()</a></div>
-            <div class="nested">£$advert.getPrice()0</div>
-            <div class="nested">$advert.getLocation()</div>
-        </div>
+        #foreach($advert in $adverts)
+            #if (!$advert.getDeleted())
+                <div class="advert-item">
+                    <!--<div class="nested">$advert.getId()</div>-->
+                    <div class="nested"><a href="/adverts/$advert.getId()"><img src="$advert.getImageUrl()"></a></div>
+                    <div class="nested"><a href="/adverts/$advert.getId()">$advert.getTitle()</a></div>
+                    <div class="nested">£$advert.getPrice()0</div>
+                    <div class="nested">$advert.getLocation()</div>
+                </div>
+            #end
         #end
     </div>
-
-
-
 </div>
 

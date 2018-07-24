@@ -172,6 +172,6 @@ private boolean deleted;
     }
 
     public void deleteAdvert(){
-        this.deleted = true;
+        setDeleted(true);
     }
 }
