@@ -152,6 +152,7 @@ padding: 2vh;
 }
 
 
+
 input[type='checkbox']
     {
     display: none;
@@ -223,7 +224,11 @@ background-position 0 0;
 }
 
 
+
+
+
 .search-box {
 float: right;
 }
+
 
