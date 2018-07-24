@@ -1,6 +1,7 @@
 * {
 margin: 0px;
 padding: 0px;
+font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -60,7 +61,7 @@ padding: 2vh;
 .button {
       color: black;
       background-color: white;
-      border: 2px solid #3ab795;
+      border: 5px solid #3ab795;
       padding: 5px;
       margin: 5px;
       display: inline-block;
@@ -69,6 +70,9 @@ padding: 2vh;
       height: 20vh;
       justify: space-around;
       float: center;
+      position: relative;
+      top: 50%;
+      border-radius: 8px;
   }
 
 .button:hover {
@@ -81,12 +85,16 @@ padding: 2vh;
      height: 20vh;
      justify: space-around;
      float: center;
+     position: relative;
+     top: 50%;
+     border-radius: 8px;
   }
 
   th {
-    padding: 1vh;
+    padding: 2vh;
     text-align: left;
   }
+
   td {
     padding: 2vh;
     text-align: left;
@@ -238,6 +246,14 @@ grid-row-start: 1;
  justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.box {
+ display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
 }
 
 
