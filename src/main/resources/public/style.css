@@ -49,7 +49,7 @@ padding: 2vh;
 
   a {
   text-decoration: none;
-
+  color: #3ab795;
   }
 
 .button {
@@ -154,6 +154,7 @@ padding: 2vh;
 input[type='checkbox']
     {
     display: hidden;
+    opacity:0;
     }
 
 
