@@ -94,15 +94,15 @@ public class AdvertsController {
         }, new VelocityTemplateEngine());
 
 
-        // Sports
-        get("/adverts/sports", (request, response) -> {
-            Map<String, Object> model = new HashMap();
-            model.put("template", "templates/adverts/sports.vtl");
-
-            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.SPORTS);
-            model.put("adverts", adverts);
-            return new ModelAndView(model, "templates/layout.vtl");
-        }, new VelocityTemplateEngine());
+//        // Sports
+//        get("/adverts/sports", (request, response) -> {
+//            Map<String, Object> model = new HashMap();
+//            model.put("template", "templates/adverts/sports.vtl");
+//
+//            List<Advert> adverts = DBAdvert.getAllAdvertsForCategory(CategoryType.SPORTS);
+//            model.put("adverts", adverts);
+//            return new ModelAndView(model, "templates/layout.vtl");
+//        }, new VelocityTemplateEngine());
 
         // Instruments
         get("/adverts/instruments", (request, response) -> {
@@ -235,14 +235,6 @@ public class AdvertsController {
             response.redirect("/adverts");
             return null;
         });
-
-
-
-
-
-
-
-
 
         // UPDATE
         post("adverts/:id", (request, response) -> {
