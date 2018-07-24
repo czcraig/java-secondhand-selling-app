@@ -29,10 +29,13 @@ private User seller;
 private String imageUrl;
 private String adStatus;
 private List<User> favouritedBy;
+private boolean deleted;
 
 
     public Advert() {
     }
+
+
 
     public Advert(String title, String description, CategoryType category, double price, String location, User seller, String imageUrl, String adStatus) {
         this.title = title;
@@ -45,6 +48,8 @@ private List<User> favouritedBy;
         this.adStatus = adStatus;
         this.updatedAt = new Date(System.currentTimeMillis());
         this.favouritedBy = new ArrayList<User>();
+        this.deleted = false;
+
     }
 
     @Id
@@ -155,5 +160,18 @@ private List<User> favouritedBy;
 
     public void addUserToFavouritedBy(User user){
         favouritedBy.add(user);
+    }
+
+    @Column(name = "deleted")
+    public boolean getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
+
+    public void deleteAdvert(){
+        this.deleted = true;
     }
 }

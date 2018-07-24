@@ -69,6 +69,7 @@ public class DBAdvert {
             session.close();
         }
         return adverts;
+
     }
 
 
