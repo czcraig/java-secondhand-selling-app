@@ -22,6 +22,7 @@ public class DBAdvert {
         try {
             Criteria cr = session.createCriteria(Advert.class);
             cr.add(Restrictions.eq("seller", seller));
+            cr.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
             adverts = cr.list();
         }
         catch (HibernateException ex){

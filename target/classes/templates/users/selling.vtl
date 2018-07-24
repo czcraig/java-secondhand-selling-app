@@ -2,17 +2,14 @@
 <h1>Your Banana Tree Branch</h1>
 
 <div class="container">
-<table>
-    <tr>
-    <th>Selling</th>
-    </tr>
-    #foreach ($advert in $adverts)
-    <tr>
+    <h2>Items for sale</h2>
+    <div class="wrapper">
 
-<td><a href="/adverts/$advert.getId()">$advert.getTitle()</a></td>
-
-    </tr>
-    #end
-
-</table>
+        #foreach ($advert in $adverts)
+        <div class="advert-item">
+            <a href="/adverts/$advert.getId()">$advert.getTitle()</a>
+        </div>
+        #end
     </div>
+
+</div>
