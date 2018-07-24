@@ -25,6 +25,7 @@ public class DBUser {
             Criteria cr = session.createCriteria(Advert.class);
             cr.createAlias("favouritedBy", "user");
             cr.add(Restrictions.eq("user.id", user.getId()));
+            cr.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
             adverts = cr.list();
         }
         catch (HibernateException ex){
